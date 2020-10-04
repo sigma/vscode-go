@@ -84,7 +84,7 @@ let restartCommand: vscode.Disposable;
 
 // When enabled, users may be prompted to fill out the gopls survey.
 // For now, we turn it on in the Nightly extension to test it.
-const goplsSurveyOn: boolean = extensionId === 'golang.go-nightly';
+const goplsSurveyOn: boolean = extensionId === 'sigma.go-nightly';
 
 // lastUserAction is the time of the last user-triggered change.
 // A user-triggered change is a didOpen, didChange, didSave, or didClose event.
@@ -707,7 +707,7 @@ export const getTimestampForVersion = async (tool: Tool, version: semver.SemVer)
 	return time;
 };
 
-const acceptGoplsPrerelease = (extensionId === 'golang.go-nightly');
+const acceptGoplsPrerelease = (extensionId === 'sigma.go-nightly');
 
 export const getLatestGoplsVersion = async (tool: Tool) => {
 	// If the user has a version of gopls that we understand,
